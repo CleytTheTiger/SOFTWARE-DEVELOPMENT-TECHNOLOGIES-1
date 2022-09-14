@@ -7,7 +7,12 @@ namespace Lab_1
         static void Main(string[] args)
         {
             Console.WriteLine("Добро пожаловать в недоКалькулятор");
-            while (true)
+            string str = "";
+            int a = 0;
+            int b = 0;
+            int res = 0;
+            str = Console.ReadLine();
+            if (str.Contains("+"))
             {
                 string str = "";
                 int a = 0;
