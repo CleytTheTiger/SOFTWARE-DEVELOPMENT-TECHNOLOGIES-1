@@ -6,6 +6,7 @@ namespace Lab_1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Добро пожаловать в недоКалькулятор");
             string str = "";
             int a = 0;
             int b = 0;
