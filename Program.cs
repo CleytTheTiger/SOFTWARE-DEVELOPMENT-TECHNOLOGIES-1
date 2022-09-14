@@ -13,26 +13,54 @@ namespace Lab_1
             str = Console.ReadLine();
             if (str.Contains("+"))
             {
-                a = Convert.ToInt32(str.Split("+")[0]);
-                b = Convert.ToInt32(str.Split("+")[1]);
+                try
+                {
+                    a = Convert.ToInt32(str.Split("+")[0]);
+                    b = Convert.ToInt32(str.Split("+")[1]);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Что-то не так с числами...");
+                }
                 res = a + b;
             }
             else if (str.Contains("-"))
             {
-                a = Convert.ToInt32(str.Split("-")[0]);
-                b = Convert.ToInt32(str.Split("-")[1]);
+                try
+                {
+                    a = Convert.ToInt32(str.Split("-")[0]);
+                    b = Convert.ToInt32(str.Split("-")[1]);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Что-то не так с числами...");
+                }
                 res = a - b;
             }
             else if (str.Contains("*"))
             {
-                a = Convert.ToInt32(str.Split("*")[0]);
-                b = Convert.ToInt32(str.Split("*")[1]);
+                try
+                {
+                    a = Convert.ToInt32(str.Split("*")[0]);
+                    b = Convert.ToInt32(str.Split("*")[1]);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Что-то не так с числами...");
+                }
                 res = a * b;
             }
             else if (str.Contains("/"))
             {
-                a = Convert.ToInt32(str.Split("/")[0]);
-                b = Convert.ToInt32(str.Split("/")[1]);
+                try
+                {
+                    a = Convert.ToInt32(str.Split("/")[0]);
+                    b = Convert.ToInt32(str.Split("/")[1]);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Что-то не так с числами...");
+                }
                 try
                 {
                     res = a / b;
