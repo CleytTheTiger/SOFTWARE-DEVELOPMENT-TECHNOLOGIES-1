@@ -7,33 +7,41 @@ namespace Lab_1
         static void Main(string[] args)
         {
             string str = "";
-            double a = 0;
-            double b = 0;
-            double res = 0;
+            int a = 0;
+            int b = 0;
+            int res = 0;
             str = Console.ReadLine();
             if (str.Contains("+"))
             {
-                a = Convert.ToDouble(str.Split("+")[0]);
-                b = Convert.ToDouble(str.Split("+")[1]);
+                a = Convert.ToInt32(str.Split("+")[0]);
+                b = Convert.ToInt32(str.Split("+")[1]);
                 res = a + b;
             }
             else if (str.Contains("-"))
             {
-                a = Convert.ToDouble(str.Split("-")[0]);
-                b = Convert.ToDouble(str.Split("-")[1]);
+                a = Convert.ToInt32(str.Split("-")[0]);
+                b = Convert.ToInt32(str.Split("-")[1]);
                 res = a - b;
             }
             else if (str.Contains("*"))
             {
-                a = Convert.ToDouble(str.Split("*")[0]);
-                b = Convert.ToDouble(str.Split("*")[1]);
+                a = Convert.ToInt32(str.Split("*")[0]);
+                b = Convert.ToInt32(str.Split("*")[1]);
                 res = a * b;
             }
             else if (str.Contains("/"))
             {
-                a = Convert.ToDouble(str.Split("/")[0]);
-                b = Convert.ToDouble(str.Split("/")[1]);
-                res = a / b;
+                a = Convert.ToInt32(str.Split("/")[0]);
+                b = Convert.ToInt32(str.Split("/")[1]);
+                try
+                {
+                    res = a / b;
+                }
+                catch (DivideByZeroException e)
+                {
+                    Console.WriteLine(e);
+                    Console.WriteLine("А на ноль делить нельзя!");
+                }
             }
             Console.WriteLine(res);
         }
